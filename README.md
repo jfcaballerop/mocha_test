@@ -8,17 +8,32 @@ Mocha test using ES6
 
 First enable system config:
 
-`npm init`
+```bash
+npm init
+```
+
 Install mocha framework:
 
-`npm install mocha --save`
+```bash
+npm install mocha --save
+```
 
 Install babel compiler from ES6 to ES5:
 
-`npm install babel-cli babel-core --save-dev`
+```bash
+npm install babel-cli babel-core --save-dev
 
-`npm install babel-preset-es2015 --save-dev`
+npm install babel-preset-es2015 --save-dev
+```
 
+## Configuration
+
+Config package.json
+```json
+ "scripts": {
+    "test": "mocha --compilers js:babel/register --reporter jfcp"
+  }
+```
 
 
 
