@@ -6,7 +6,7 @@ module.exports = {
         index: './app/src/index.js'
     },
     output: {
-        path: path.resolve(__dirname, '../buildWebpack'),
+        path: path.resolve(__dirname, '../build_webpack'),
         filename: '[name].js'
     },
     module: {
