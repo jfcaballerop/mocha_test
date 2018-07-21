@@ -1,3 +1,3 @@
-var calculator = require('./app/src/calc/ulator.js');
+var Calculator = require('./app/src/calc/calculator');
 
-console.log(calculator.addTested(10));
+console.log(Calculator.sum(1, 1));

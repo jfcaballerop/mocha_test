@@ -2,13 +2,13 @@
   "name": "mocha_test",
   "version": "1.0.0",
   "description": "mocha test develop",
-  "main": "app.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "mocha $(find app -name '*_test.js')",
-    "babel": "babel --presets es2015 app.js -o app/build/main.bundle.js",
-    "start": "node ./app/build/main.bundle.js",
-    "webpack": "webpack",
-    "dev": "NODE_ENV='development' webpack --env.development --config config/webpack.config.dev.js"
+    "test": "mocha  $(find app -name '*_test.js') --compilers js:babel-core/register",
+    "build": "babel ./app/src --out-dir ./build  --presets es2015 --source-maps --copy-files",
+    "start": "npm run test && npm run build && node build/index.js",
+    "dev": "NODE_ENV='development' nodemon --exec babel-node app/src/index.js",
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
   "homepage": "https://github.com/jfcaballerop/mocha_test#readme",
   "dependencies": {
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -24,12 +24,12 @@ describe("Calcultator tests using ASSERT interface from CHAI module: ", function
 
 describe.only('Test SUM function', () => {
     it('Return false if P1 is INT', () => {
-        var result = calculator.sum("1", 1);
+        let result = calculator.sum("1", 1);
         assert.typeOf(result, "number");
 
     });
     it('Return false if P2 is INT', () => {
-        var result = calculator.sum(1, "1");
+        let result = calculator.sum(1, "1");
         assert.typeOf(result, "number");
 
     });
