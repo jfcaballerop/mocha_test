@@ -30,7 +30,8 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
+build/
+buildWebpack/
 
 # Dependency directories
 node_modules/
@@ -60,6 +61,3 @@ typings/
 # next.js build output
 .next
 
-# build dir
-build/
-buildWebpack/
