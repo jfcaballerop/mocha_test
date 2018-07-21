@@ -6,3 +6,5 @@ var log = () => {
 }
 
 log()
+log()
+

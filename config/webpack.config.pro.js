@@ -10,7 +10,7 @@ module.exports = {
         filename: '[name].js'
     },
     module: {
-        rules: [{
+        loaders: [{
             test: /\.js$/,
             enforce: "pre", // preload the jshint loader
             exclude: /node_modules/, // exclude any and all files in the node_modules folder
@@ -26,5 +26,5 @@ module.exports = {
     stats: {
         colors: true
     },
-    devtool: 'eval-source-map'
+    devtool: 'cheap-module-source-map'
 };
