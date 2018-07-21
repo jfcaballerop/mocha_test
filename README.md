@@ -30,8 +30,9 @@ npm install babel-preset-es2015 --save-dev
 
 Config package.json
 ```json
- "scripts": {
-    "test": "mocha --compilers js:babel/register --reporter jfcp"
+  "scripts": {
+    "test": "mocha --compilers js:babel/register --reporter jfcp",
+    "babel": "babel --presets es2015 app.js -o app/build/main.bundle.js"
   }
 ```
 
