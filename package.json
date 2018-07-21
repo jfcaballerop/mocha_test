@@ -8,7 +8,7 @@
     "build": "babel ./app/src --out-dir ./build  --presets es2015 --source-maps --copy-files",
     "start": "npm run test && npm run build && node build/index.js",
     "dev": "NODE_ENV='development' nodemon --exec babel-node app/src/index.js",
-    "webpack": "webpack"
+    "webpack": "webpack --config ./config/webpack.config.dev.js --progress --colors"
   },
   "repository": {
     "type": "git",
